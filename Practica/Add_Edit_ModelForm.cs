@@ -23,6 +23,7 @@ namespace Practica
             Id = id;
             LoadModel();
             btn_add.Visible = false;
+            this.Text = "Редактирование модели";
         }
 
         private void LoadModel()
@@ -74,6 +75,7 @@ namespace Practica
         public Add_Edit_ModelForm()  // Для добавления
         {
             InitializeComponent();
+            this.Text = "Добавление модели";
             controls.Add(txt_name);
             controls.Add(txt_opis);
             btn_save.Visible = false;

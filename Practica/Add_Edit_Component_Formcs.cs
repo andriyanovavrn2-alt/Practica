@@ -27,7 +27,7 @@ namespace Practica
             btn_add_tov_add.Visible = false;
             num_quantity.Maximum = 100000;
             num_minstock.Maximum = 100000;
-            //здесь надо поменять название бортика у формы
+            this.Text = "Редактирование комплектующих";
         }
 
         private void LoadComponent()
@@ -102,6 +102,7 @@ namespace Practica
         public Add_Edit_Component_Formcs()  // Для добавления
         {
             InitializeComponent();
+            this.Text = "Добавление комплектующих";
             btn_save_update.Visible = false;
             controls.Add(txt_art);
             controls.Add(txt_name);

@@ -81,7 +81,7 @@ namespace Practica
 
         private void btn_spec_Click(object sender, EventArgs e)
         {
-            Specifikacia_Form specifikacia_Form = new Specifikacia_Form();
+            Specifikacia_Form specifikacia_Form = new Specifikacia_Form(Role, Id, Name);
             specifikacia_Form.ShowDialog();
         }
     }

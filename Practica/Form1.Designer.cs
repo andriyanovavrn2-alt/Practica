@@ -80,6 +80,7 @@
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(245, 28);
             this.txt_pass.TabIndex = 6;
+            this.txt_pass.UseSystemPasswordChar = true;
             // 
             // buttonVhodMain
             // 

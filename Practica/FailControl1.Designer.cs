@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btn_repair = new System.Windows.Forms.Button();
+            this.lbl_critich = new System.Windows.Forms.Label();
+            this.lbl_opis = new System.Windows.Forms.Label();
+            this.lbl_date_otk = new System.Windows.Forms.Label();
+            this.lbl_ser_num = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,96 +41,82 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.btn_repair);
+            this.panel1.Controls.Add(this.lbl_critich);
+            this.panel1.Controls.Add(this.lbl_opis);
+            this.panel1.Controls.Add(this.lbl_date_otk);
+            this.panel1.Controls.Add(this.lbl_ser_num);
             this.panel1.Location = new System.Drawing.Point(33, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 154);
+            this.panel1.Size = new System.Drawing.Size(948, 181);
             this.panel1.TabIndex = 23;
             // 
-            // button4
+            // btn_repair
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.button4.Location = new System.Drawing.Point(605, 113);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 33);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Выполнить ремонт";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_repair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_repair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_repair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_repair.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_repair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btn_repair.Location = new System.Drawing.Point(784, 111);
+            this.btn_repair.Name = "btn_repair";
+            this.btn_repair.Size = new System.Drawing.Size(148, 33);
+            this.btn_repair.TabIndex = 22;
+            this.btn_repair.Text = "Выполнить ремонт";
+            this.btn_repair.UseVisualStyleBackColor = false;
+            this.btn_repair.Click += new System.EventHandler(this.btn_repair_Click);
             // 
-            // label5
+            // lbl_critich
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
-            this.label5.Location = new System.Drawing.Point(9, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 24);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Критичность ";
+            this.lbl_critich.AutoSize = true;
+            this.lbl_critich.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_critich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
+            this.lbl_critich.Location = new System.Drawing.Point(57, 144);
+            this.lbl_critich.Name = "lbl_critich";
+            this.lbl_critich.Size = new System.Drawing.Size(123, 24);
+            this.lbl_critich.TabIndex = 20;
+            this.lbl_critich.Text = "Критичность ";
             // 
-            // label1
+            // lbl_opis
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
-            this.label1.Location = new System.Drawing.Point(9, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 24);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Описание ";
+            this.lbl_opis.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_opis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
+            this.lbl_opis.Location = new System.Drawing.Point(57, 84);
+            this.lbl_opis.Name = "lbl_opis";
+            this.lbl_opis.Size = new System.Drawing.Size(574, 60);
+            this.lbl_opis.TabIndex = 19;
+            this.lbl_opis.Text = "Описание ";
             // 
-            // label11
+            // lbl_date_otk
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
-            this.label11.Location = new System.Drawing.Point(8, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 24);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Дата отказа";
+            this.lbl_date_otk.AutoSize = true;
+            this.lbl_date_otk.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_date_otk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
+            this.lbl_date_otk.Location = new System.Drawing.Point(56, 45);
+            this.lbl_date_otk.Name = "lbl_date_otk";
+            this.lbl_date_otk.Size = new System.Drawing.Size(112, 24);
+            this.lbl_date_otk.TabIndex = 18;
+            this.lbl_date_otk.Text = "Дата отказа";
             // 
-            // label13
+            // lbl_ser_num
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
-            this.label13.Location = new System.Drawing.Point(8, 8);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(162, 24);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "Серийный номер";
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
-            this.label7.Location = new System.Drawing.Point(814, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 154);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Статус ремонта";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_ser_num.AutoSize = true;
+            this.lbl_ser_num.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_ser_num.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
+            this.lbl_ser_num.Location = new System.Drawing.Point(56, 9);
+            this.lbl_ser_num.Name = "lbl_ser_num";
+            this.lbl_ser_num.Size = new System.Drawing.Size(162, 24);
+            this.lbl_ser_num.TabIndex = 17;
+            this.lbl_ser_num.Text = "Серийный номер";
             // 
             // FailControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(45)))));
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Name = "FailControl1";
-            this.Size = new System.Drawing.Size(1029, 172);
+            this.Size = new System.Drawing.Size(1029, 199);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -141,11 +126,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_repair;
+        private System.Windows.Forms.Label lbl_critich;
+        private System.Windows.Forms.Label lbl_opis;
+        private System.Windows.Forms.Label lbl_date_otk;
+        private System.Windows.Forms.Label lbl_ser_num;
     }
 }

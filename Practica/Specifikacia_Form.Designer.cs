@@ -28,86 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label12 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Specifikacia_Form));
+            this.lbl_name_model = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.btn_dobavit = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label12
+            // lbl_name_model
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
-            this.label12.Location = new System.Drawing.Point(12, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(233, 35);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Название модели";
+            this.lbl_name_model.AutoSize = true;
+            this.lbl_name_model.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_name_model.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(17)))));
+            this.lbl_name_model.Location = new System.Drawing.Point(12, 21);
+            this.lbl_name_model.Name = "lbl_name_model";
+            this.lbl_name_model.Size = new System.Drawing.Size(233, 35);
+            this.lbl_name_model.TabIndex = 8;
+            this.lbl_name_model.Text = "Название модели";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(45)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 77);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(440, 167);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(774, 233);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
-            // button3
+            // btn_back
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.button3.Location = new System.Drawing.Point(327, 338);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 33);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Назад";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_back.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btn_back.Location = new System.Drawing.Point(661, 404);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(131, 33);
+            this.btn_back.TabIndex = 34;
+            this.btn_back.Text = "Назад";
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // button1
+            // btn_dobavit
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.button1.Location = new System.Drawing.Point(327, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 47);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_dobavit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_dobavit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_dobavit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_dobavit.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_dobavit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btn_dobavit.Location = new System.Drawing.Point(661, 316);
+            this.btn_dobavit.Name = "btn_dobavit";
+            this.btn_dobavit.Size = new System.Drawing.Size(131, 47);
+            this.btn_dobavit.TabIndex = 32;
+            this.btn_dobavit.Text = "Добавить комплектующую";
+            this.btn_dobavit.UseVisualStyleBackColor = false;
+            this.btn_dobavit.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // btn_save
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.button2.Location = new System.Drawing.Point(190, 250);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 47);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Добавить комплектующую";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btn_save.Location = new System.Drawing.Point(524, 404);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(131, 33);
+            this.btn_save.TabIndex = 33;
+            this.btn_save.Text = "Сохранить";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // Specifikacia_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(472, 383);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(809, 446);
+            this.Controls.Add(this.btn_back);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_dobavit);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lbl_name_model);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Specifikacia_Form";
             this.Text = "Спецификация";
             this.ResumeLayout(false);
@@ -117,10 +122,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_name_model;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btn_dobavit;
+        private System.Windows.Forms.Button btn_save;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock_Operation_Formcs));
             this.label8 = new System.Windows.Forms.Label();
             this.num_quantity = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
@@ -95,6 +96,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.num_quantity);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Stock_Operation_Formcs";
             this.Text = "Приход/Расход комплектующих";
             this.Load += new System.EventHandler(this.Stock_Operation_Formcs_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Edit_ModelForm));
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
@@ -140,6 +141,7 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Add_Edit_ModelForm";
             this.Text = "Добавить/редактировать модель";
             this.ResumeLayout(false);

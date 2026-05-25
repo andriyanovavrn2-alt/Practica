@@ -115,6 +115,12 @@
     <Compile Include="Add_Edit_ModelForm.Designer.cs">
       <DependentUpon>Add_Edit_ModelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_Got_Controller_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Got_Controller_Form.Designer.cs">
+      <DependentUpon>Add_Got_Controller_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComponentControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add_Edit_ModelForm.resx">
       <DependentUpon>Add_Edit_ModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Got_Controller_Form.resx">
+      <DependentUpon>Add_Got_Controller_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentControl1.resx">
       <DependentUpon>ComponentControl1.cs</DependentUpon>

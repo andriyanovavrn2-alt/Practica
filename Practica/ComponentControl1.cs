@@ -69,35 +69,28 @@ namespace Practica
             using (NpgsqlConnection con = new NpgsqlConnection(connectionDB))
             {
                 con.Open();
-                string proverka = $@"SELECT EXISTS (SELECT 1 FROM public.production_order WHERE component_id = @id)
-                            OR EXISTS (SELECT 1 FROM public.specifikacia WHERE component_id = @id)";
+                string proverka = @"SELECT EXISTS (SELECT 1 FROM public.specifikacia WHERE component_id = @id)";
                 using (NpgsqlCommand cmd = new NpgsqlCommand(proverka, con))
                 {
                     cmd.Parameters.AddWithValue("@id", Id);
-                    int orderCount = Convert.ToInt32(cmd.ExecuteScalar());
-                    if (orderCount > 0)
+                    bool isUsed = (bool)cmd.ExecuteScalar();
+                    if (isUsed)
                     {
-                        MessageBox.Show("Невозможно удалить компонент: он используется в заказах или спецификациях", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Невозможно удалить компонент: он используется в спецификациях", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    else
+                }
+
+                if (MessageBox.Show("Вы точно хотите удалить компонент?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string delete = "DELETE FROM public.component WHERE id = @id";
+                    using (NpgsqlCommand command = new NpgsqlCommand(delete, con))
                     {
-                        if (MessageBox.Show("Вы точно хотите удалить компонент?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                        {
-                            string delete = $@"DELETE FROM public.component WHERE id = @id";
-                            using (NpgsqlCommand command = new NpgsqlCommand(delete, con))
-                            {
-                                command.Parameters.AddWithValue("@id", Id);
-                                command.ExecuteNonQuery();
-                                {
-                                    con.Close();
-                                }
-                                MessageBox.Show("Компонент успешно удалён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Parent.Controls.Remove(this);
-                                return;
-                            }
-                        }
+                        command.Parameters.AddWithValue("@id", Id);
+                        command.ExecuteNonQuery();
                     }
+                    MessageBox.Show("Компонент успешно удалён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Parent.Controls.Remove(this);
                 }
             }
         }

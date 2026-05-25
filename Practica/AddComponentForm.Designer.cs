@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddComponentForm));
             this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.num_quantity = new System.Windows.Forms.NumericUpDown();
+            this.cmb_name = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.num_quantity)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -48,24 +50,24 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "Количество на один контроллер";
             // 
-            // numericUpDown1
+            // num_quantity
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.numericUpDown1.Location = new System.Drawing.Point(327, 76);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 28;
+            this.num_quantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
+            this.num_quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.num_quantity.Location = new System.Drawing.Point(327, 76);
+            this.num_quantity.Name = "num_quantity";
+            this.num_quantity.Size = new System.Drawing.Size(120, 22);
+            this.num_quantity.TabIndex = 28;
             // 
-            // comboBox1
+            // cmb_name
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmb_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(16)))));
+            this.cmb_name.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmb_name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmb_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.cmb_name.FormattingEnabled = true;
+            this.cmb_name.Items.AddRange(new object[] {
             "Все типы",
             "Резисторы",
             "Конденсаторы",
@@ -73,10 +75,10 @@
             "Разъёмы",
             "Блоки питания",
             "Реле и оптопары"});
-            this.comboBox1.Location = new System.Drawing.Point(327, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 28);
-            this.comboBox1.TabIndex = 27;
+            this.cmb_name.Location = new System.Drawing.Point(327, 27);
+            this.cmb_name.Name = "cmb_name";
+            this.cmb_name.Size = new System.Drawing.Size(325, 28);
+            this.cmb_name.TabIndex = 27;
             // 
             // label5
             // 
@@ -89,49 +91,68 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Название комплектующей";
             // 
-            // button1
+            // btn_save
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.button1.Location = new System.Drawing.Point(327, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 33);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btn_save.Location = new System.Drawing.Point(418, 186);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(114, 33);
+            this.btn_save.TabIndex = 32;
+            this.btn_save.Text = "Сохранить";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // button3
+            // btn_back
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.button3.Location = new System.Drawing.Point(458, 156);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 33);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Назад";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_back.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btn_back.Location = new System.Drawing.Point(538, 186);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(114, 33);
+            this.btn_back.TabIndex = 33;
+            this.btn_back.Text = "Назад";
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_add.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btn_add.Location = new System.Drawing.Point(538, 147);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(114, 33);
+            this.btn_add.TabIndex = 34;
+            this.btn_add.Text = "Добавить";
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // AddComponentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(586, 208);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(664, 231);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.btn_back);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.num_quantity);
+            this.Controls.Add(this.cmb_name);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddComponentForm";
             this.Text = "Добавить комплектующую";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_quantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,10 +161,11 @@
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown num_quantity;
+        private System.Windows.Forms.ComboBox cmb_name;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btn_add;
     }
 }

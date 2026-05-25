@@ -19,7 +19,7 @@ namespace Practica
         {
             InitializeComponent();
         }
-        public void Aut()  //Метод для Авторизации
+        public void Aut()
         {
             using (NpgsqlConnection con = new NpgsqlConnection(connectionDB))
             {
