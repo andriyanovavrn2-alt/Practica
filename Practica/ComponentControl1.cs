@@ -38,7 +38,6 @@ namespace Practica
                 btn_rashod.Visible = false;
             }
         }
-
         public void SetLabel()
         {
             lbl_name.Text ="Название: " + NameConponent;

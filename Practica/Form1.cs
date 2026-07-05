@@ -27,26 +27,31 @@ namespace Practica
                 var sql = $@"SELECT roles.roles_name, fio, login, password
 	                            FROM public.users 
 	                            JOIN roles ON roles.id = users.role_id
-                            WHERE login = '{txt_log.Text}' AND password = '{txt_pass.Text}'";
-                NpgsqlCommand com = new NpgsqlCommand(sql, con);
-                NpgsqlDataReader reader = com.ExecuteReader();
-                if (reader.Read())
+                            WHERE login = @login AND password = crypt(@password, password)";
+                using (NpgsqlCommand com = new NpgsqlCommand(sql, con))
                 {
-                    MessageBox.Show("Успешное подключение!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    MainForm mainForm = new MainForm(reader.GetString(0), reader.GetString(1));
-                    mainForm.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Повторите попытку!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    com.Parameters.AddWithValue("@login", txt_log.Text);
+                    com.Parameters.AddWithValue("@password", txt_pass.Text);
+                    using (NpgsqlDataReader reader = com.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            MessageBox.Show("Успешное подключение!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            MainForm mainForm = new MainForm(reader.GetString(0), reader.GetString(1));
+                            mainForm.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Повторите попытку!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                        }
+                    }
+                }
             }
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             Aut();
